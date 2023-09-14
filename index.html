@@ -1,12 +1,122 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    
-</head>
-<body>
-<script src="SudokuTest.js"></script>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sudoku</title>
+    <link rel="stylesheet" href="src/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@1,200&family=Noto+Sans+Linear+B&family=Rubik+Mono+One&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="grid-map">
+      <div class="sub-grid-map" id="r0-c0">
+        <div class="grid-cell" id="00"><span></span></div>
+        <div class="grid-cell" id="01"><span></span></div>
+        <div class="grid-cell" id="02"><span></span></div>
+        <div class="grid-cell" id="10"><span></span></div>
+        <div class="grid-cell" id="11"><span></span></div>
+        <div class="grid-cell" id="12"><span></span></div>
+        <div class="grid-cell" id="20"><span></span></div>
+        <div class="grid-cell" id="21"><span></span></div>
+        <div class="grid-cell" id="22"><span></span></div>
+      </div>
+      <div class="sub-grid-map" id="r0-c1">
+        <div class="grid-cell" id="03"><span></span></div>
+        <div class="grid-cell" id="04"><span></span></div>
+        <div class="grid-cell" id="05"><span></span></div>
+        <div class="grid-cell" id="13"><span></span></div>
+        <div class="grid-cell" id="14"><span></span></div>
+        <div class="grid-cell" id="15"><span></span></div>
+        <div class="grid-cell" id="23"><span></span></div>
+        <div class="grid-cell" id="24"><span></span></div>
+        <div class="grid-cell" id="25"><span></span></div>
+      </div>
+      <div class="sub-grid-map" id="r0-c2">
+        <div class="grid-cell" id="06"><span></span></div>
+        <div class="grid-cell" id="07"><span></span></div>
+        <div class="grid-cell" id="08"><span></span></div>
+        <div class="grid-cell" id="16"><span></span></div>
+        <div class="grid-cell" id="17"><span></span></div>
+        <div class="grid-cell" id="18"><span></span></div>
+        <div class="grid-cell" id="26"><span></span></div>
+        <div class="grid-cell" id="27"><span></span></div>
+        <div class="grid-cell" id="28"><span></span></div>
+      </div>
+
+      <div class="sub-grid-map" id="r1-c0">
+        <div class="grid-cell" id="30"><span></span></div>
+        <div class="grid-cell" id="31"><span></span></div>
+        <div class="grid-cell" id="32"><span></span></div>
+        <div class="grid-cell" id="40"><span></span></div>
+        <div class="grid-cell" id="41"><span></span></div>
+        <div class="grid-cell" id="42"><span></span></div>
+        <div class="grid-cell" id="50"><span></span></div>
+        <div class="grid-cell" id="51"><span></span></div>
+        <div class="grid-cell" id="52"><span></span></div>
+      </div>
+      <div class="sub-grid-map" id="r1-c1">
+        <div class="grid-cell" id="33"><span></span></div>
+        <div class="grid-cell" id="34"><span></span></div>
+        <div class="grid-cell" id="35"><span></span></div>
+        <div class="grid-cell" id="43"><span></span></div>
+        <div class="grid-cell" id="44"><span></span></div>
+        <div class="grid-cell" id="45"><span></span></div>
+        <div class="grid-cell" id="53"><span></span></div>
+        <div class="grid-cell" id="54"><span></span></div>
+        <div class="grid-cell" id="55"><span></span></div>
+      </div>
+      <div class="sub-grid-map" id="r1-c2">
+        <div class="grid-cell" id="36"><span></span></div>
+        <div class="grid-cell" id="37"><span></span></div>
+        <div class="grid-cell" id="38"><span></span></div>
+        <div class="grid-cell" id="46"><span></span></div>
+        <div class="grid-cell" id="47"><span></span></div>
+        <div class="grid-cell" id="48"><span></span></div>
+        <div class="grid-cell" id="56"><span></span></div>
+        <div class="grid-cell" id="57"><span></span></div>
+        <div class="grid-cell" id="58"><span></span></div>
+      </div>
+
+      <div class="sub-grid-map" id="r2-c0">
+        <div class="grid-cell" id="60"><span></span></div>
+        <div class="grid-cell" id="61"><span></span></div>
+        <div class="grid-cell" id="62"><span></span></div>
+        <div class="grid-cell" id="70"><span></span></div>
+        <div class="grid-cell" id="71"><span></span></div>
+        <div class="grid-cell" id="72"><span></span></div>
+        <div class="grid-cell" id="80"><span></span></div>
+        <div class="grid-cell" id="81"><span></span></div>
+        <div class="grid-cell" id="82"><span></span></div>
+      </div>
+      <div class="sub-grid-map" id="r2-c1">
+        <div class="grid-cell" id="63"><span></span></div>
+        <div class="grid-cell" id="64"><span></span></div>
+        <div class="grid-cell" id="65"><span></span></div>
+        <div class="grid-cell" id="73"><span></span></div>
+        <div class="grid-cell" id="74"><span></span></div>
+        <div class="grid-cell" id="75"><span></span></div>
+        <div class="grid-cell" id="83"><span></span></div>
+        <div class="grid-cell" id="84"><span></span></div>
+        <div class="grid-cell" id="85"><span></span></div>
+      </div>
+      <div class="sub-grid-map" id="r2-c2">
+        <div class="grid-cell" id="66"><span></span></div>
+        <div class="grid-cell" id="67"><span></span></div>
+        <div class="grid-cell" id="68"><span></span></div>
+        <div class="grid-cell" id="76"><span></span></div>
+        <div class="grid-cell" id="77"><span></span></div>
+        <div class="grid-cell" id="78"><span></span></div>
+        <div class="grid-cell" id="86"><span></span></div>
+        <div class="grid-cell" id="87"><span></span></div>
+        <div class="grid-cell" id="88"><span></span></div>
+      </div>
+    </div>
+
+    <script src="SudokuTest.js"></script>
+  </body>
 </html>
