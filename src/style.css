@@ -37,7 +37,7 @@
     transition: background-color 0.2s;
 }
 
-.sub-grid-map:hover {
+.sub-grid-map-hover {
     background-color:rgb(236, 236, 236);
 }
 
@@ -50,10 +50,14 @@
     transition: background-color 0.2s;
 }
 
-.grid-cell:hover {
-     background-color:silver;
+.grid-cell-hover {
+     background-color:rgb(238, 235, 235);
 }
 
-.vh-grid {
+.rc-grid-hover {
     background-color:rgb(161, 154, 154);
+}
+
+span {
+    pointer-events: none;
 }
