@@ -33,7 +33,7 @@ class SudokuGenerator
     numList = [1,2,3,4,5,6,7,8,9];
 
         //* check if a number is valid for a given row and column
-        #_IsValid(row, col, num) {
+        _IsValid(row, col, num) {
             //* see if num exists in row or column
             for (let i = 0; i < this.GridSize; i++) 
             {
@@ -68,7 +68,7 @@ class SudokuGenerator
         }
 
         //* Method to solve the Sudoku grid recursively using backtracking
-        #_Solve(row, col)  
+        _Solve(row, col)  
         {
             //* End of grid, solution done!
             if(row == this.GridSize)
@@ -124,6 +124,33 @@ class SudokuGenerator
 
 }
 
+
+
 let sudoku = new SudokuGenerator();
 
 sudoku.GenerateSudoku();
+
+let docs = document.getElementsByClassName("grid-cell");
+for (let i = 0; i < docs.length; i++) {
+    docs[i].addEventListener("mouseenter", async (event)=>{
+        let drops = document.querySelectorAll(".vh-grid");
+        
+        drops.forEach((drop) => {
+            drop.classList.remove("vh-grid");
+        });
+
+
+
+        let VMarkings = document.querySelectorAll(".v"+event.target.id[0]);
+        let HMarkings = document.querySelectorAll(".h"+event.target.id[1]);
+
+
+        for (let i = 0; i < VMarkings.length; i++) {
+            VMarkings[i].classList.add("vh-grid");
+            HMarkings[i].classList.add("vh-grid");
+
+        }
+
+    });
+    
+}
