@@ -7,8 +7,9 @@
     text-align: center;
     justify-content: center;
     cursor: default;
+    pointer-events:none;
+    user-select: none;
  }
-
 .grid-map {
     position: absolute;
     left: 10%;
@@ -57,7 +58,58 @@
 .rc-grid-hover {
     background-color:rgb(161, 154, 154);
 }
-
-span {
+#num-center{
+    position: relative;
+    border-radius: 50%;
+    width:70px;
+    height:70px;
+    left:-800px;
+    top:-800px;
+    transition: background-color 0.2;
     pointer-events: none;
+    user-select: none;
+    
+
+}
+.num-holder{
+    position:absolute;
+    left: calc(50% - 25px);
+    top: calc(50% - 25px);
+    width:50px;
+    height:50px;
+    padding-right:4px;
+    padding-top:3px;
+    border-radius:50%;
+    background-color: rgba(250, 250, 250, 0);
+    border: none;
+    color: rgba(255, 255, 255, 0);
+}
+
+.num-holder:nth-child(1){
+    transition: transform 0.2s, background-color 0.2s, color 0.2s, border 0.2s;
+}
+.num-holder:nth-child(2){
+    transition: transform 0.2s, background-color 0.2s, color 0.2s, border 0.2s;
+}
+
+.num-holder:nth-child(3){
+    transition: transform 0.2s, background-color 0.2s, color 0.2s, border 0.2s;
+}
+.num-holder:nth-child(4){
+    transition: transform 0.2s, background-color 0.2s, color 0.2s, border 0.2s;
+}
+.num-holder:nth-child(5){
+    transition: transform 0.2s, background-color 0.2s, color 0.2s, border 0.2s;
+}
+.num-holder:nth-child(6){
+    transition: transform 0.2s, background-color 0.2s, color 0.2s, border 0.2s;
+}
+.num-holder:nth-child(7){
+    transition: transform 0.2s, background-color 0.2s, color 0.2s, border 0.2s;
+}
+.num-holder:nth-child(8){
+    transition: transform 0.2s, background-color 0.2s, color 0.2s, border 0.2s;
+}
+.num-holder:nth-child(9){
+    transition: transform 0.2s, background-color 0.2s, color 0.2s, border 0.2s;
 }
